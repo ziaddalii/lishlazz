@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    img {
+        /* width: 100%; */
+        object-fit: cover;
+    }
+    body{
+        @apply bg-[#f1f3f6]
+    }
+}
+
+
+@layer components {
+    main {
+        @apply pb-10 space-y-10 min-h-[70vh];
+    }
+
+    .link-primary {
+        @apply transition-all duration-200 hover:text-primary-500;
+    }
+    section {
+        @apply mt-6;
+    }
+}
+
+.list-outlined-disc {
+    --dot-color: #000;
+    list-style: none;
+    padding-inline-start: 0.5rem;
+}
+
+.swiper-pagination-bullet{
+    background-color: white!important;
+    border-radius:9999999px!important;
+    transition: 300ms;
+}
+
+.swiper-pagination-bullet-active{
+    width: 1.5rem!important;
+}
+
+.list-outlined-disc li::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 2px solid var(--dot-color);
+    border-radius: 50%;
+    margin-inline-end: 0.5rem;
+}
