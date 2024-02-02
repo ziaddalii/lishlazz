@@ -1,9 +1,9 @@
 import {Box, Grid} from "@mui/material";
 import KeyIcon from "@mui/icons-material/Key";
 import ThirdPartyButton from "@/components/common/buttons/third-party.button";
-import Google from "@/public/social-media/google_white.webp";
-import Facebook from "@/public/social-media/facebook_white.webp";
-import Twitter from "@/public/social-media/twitter_x_white.webp";
+// import Google from "@/public/social-media/google_white.webp";
+// import Facebook from "@/public/social-media/facebook_white.webp";
+// import Twitter from "@/public/social-media/twitter_x_white.webp";
 import {GlobalInterface} from "@/interfaces/global.interface";
 
 interface Props extends GlobalInterface {}
