@@ -34,7 +34,7 @@ export default async function LoginPage({params: {locale}}: Props) {
         <Box component="main">
             
             {/*Nav Header*/}
-            <HeaderNavButtons items={[{name: t("pages.login"), link: "/auth/login"}]}/>
+            {/* <HeaderNavButtons items={[{name: t("pages.login"), link: "/auth/login"}]}/> */}
             
             {/*Register Section*/}
             <Container className="!bg-secondary-100 space-y-4 p-4">

@@ -2,7 +2,7 @@
 import { Box, Container, Divider, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
 import FrontCar from "@/public/product-details/front.webp";
 import { useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import CartLocationForm from "./cart-location";
 
 const DeliveryAddresses = ({checkout, locale }) => {
@@ -28,7 +28,7 @@ const DeliveryAddresses = ({checkout, locale }) => {
         <article className=" p-4 space-y-4 ">
             <FormControl>
                 <RadioGroup
-                    onChange={() => { setSelectedValue(event.target.value) }}
+                    onChange={() => { setSelectedValue(event.target.value);}}
                     // value={selectedValue}
                     className="space-y-2"
                     aria-labelledby="address group"

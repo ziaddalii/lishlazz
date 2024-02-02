@@ -1,5 +1,5 @@
 import * as dayjs from "dayjs";
-import {AdsState} from "@/api/interfaces.api";
+// import {AdsState} from "@/api/interfaces.api";
 import {TLocale, TLocalization} from "@/interfaces/global.interface";
 
 export const format_duration_diff_from_months_to_seconds = (timestamp: string, t: TLocalization): number => {
@@ -38,16 +38,16 @@ export const format_page_num = (page: string): number => {
     return parsed_page;
 };
 
-export const get_ad_state_text = (state: AdsState) => {
-    switch (state) {
-        case AdsState.NEW:
-            return "fields.new";
-        case AdsState.PAID:
-            return "fields.paid";
-        case AdsState.PINNED:
-            return "fields.pinned";
-    }
-};
+// export const get_ad_state_text = (state: AdsState) => {
+//     switch (state) {
+//         case AdsState.NEW:
+//             return "fields.new";
+//         case AdsState.PAID:
+//             return "fields.paid";
+//         case AdsState.PINNED:
+//             return "fields.pinned";
+//     }
+// };
 
 export const format_date = (date_string, template = "DD/MM/YYYY") => {
     return dayjs(date_string).format(template);

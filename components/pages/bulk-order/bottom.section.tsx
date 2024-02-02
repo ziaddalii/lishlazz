@@ -1,16 +1,12 @@
-import { Box } from "@mui/material";
-import { build_meta_data, LocaleParams } from "@/app/[locale]/layout";
-import { Metadata } from "next";
-import { getTranslator } from "next-intl/server";
 import { GlobalInterface } from "@/interfaces/global.interface";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import TakeoutDiningIcon from "@mui/icons-material/TakeoutDining";
 import DiscountIcon from "@mui/icons-material/Discount";
 import ManageHistoryIcon from "@mui/icons-material/ManageHistory";
-import People1 from "@/public/bulk-order/people.png"
-import People2 from "@/public/bulk-order/people-2.png"
-import Restaurant from "@/public/bulk-order/restaurant.png"
+import People1 from "@/public/bulk-order/people.png";
+import People2 from "@/public/bulk-order/people-2.png";
+import Restaurant from "@/public/bulk-order/restaurant.png";
 import Image from "next/image";
 interface Props extends GlobalInterface {
     data: {
