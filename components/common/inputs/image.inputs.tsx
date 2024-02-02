@@ -1,8 +1,6 @@
 import {Box, IconButton, Typography} from "@mui/material";
 import {ChangeEvent, useState} from "react";
 import ImageIcon from "@mui/icons-material/Image";
-// import DefaultAvatar from "@/public/seller/default_avatar.webp";
-// import ImageCard from "./../cards/image.card";
 import {GlobalInterface} from "@/interfaces/global.interface";
 
 interface Props extends GlobalInterface {
@@ -48,7 +46,7 @@ export default function InputImage({ id, init, disabled, hasError, error, onImag
                 gap: "0.5rem",
             }}
         >
-            <ImageCard preview={preview} alt={id} base={DefaultAvatar} />
+            
 
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <input
