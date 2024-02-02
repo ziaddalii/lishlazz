@@ -1,14 +1,14 @@
 import {Box, Container} from "@mui/material";
-import AdsenseAd from "@/components/common/ads/adsense.ad";
-import HeaderNavButtons from "@/components/common/buttons/header-nav.buttons";
+// import AdsenseAd from "@/components/common/ads/adsense.ad";
+// import HeaderNavButtons from "@/components/common/buttons/header-nav.buttons";
 import Link from "next/link";
 import {build_meta_data, LocaleParams} from "@/app/[locale]/layout";
 import {Metadata} from "next";
 import {getTranslator} from "next-intl/server";
-import {AdsensePositions} from "@/enums/adsense-positions.enum";
+// import {AdsensePositions} from "@/enums/adsense-positions.enum";
 import {ThirdPartyRegisterSection} from "@/components/pages/auth/third-party-register.section";
 import {RegisterFormSection} from "@/components/pages/auth/register-form.section";
-import {get_register} from "@/api/requests.api";
+// import {get_register} from "@/api/requests.api";
 import {GlobalInterface, TLocale} from "@/interfaces/global.interface";
 import {SelectModel} from "@/components/common/form/select.form";
 

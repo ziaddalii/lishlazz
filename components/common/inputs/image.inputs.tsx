@@ -1,8 +1,8 @@
 import {Box, IconButton, Typography} from "@mui/material";
 import {ChangeEvent, useState} from "react";
 import ImageIcon from "@mui/icons-material/Image";
-import DefaultAvatar from "@/public/seller/default_avatar.webp";
-import ImageCard from "./../cards/image.card";
+// import DefaultAvatar from "@/public/seller/default_avatar.webp";
+// import ImageCard from "./../cards/image.card";
 import {GlobalInterface} from "@/interfaces/global.interface";
 
 interface Props extends GlobalInterface {
