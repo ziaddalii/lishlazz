@@ -7,15 +7,15 @@ import {getTranslator} from "next-intl/server";
 import NavBar from "@/components/navigation/nav-bar";
 import FloatingArrowButton from "@/components/common/buttons/floating-arrow.button";
 import Footer from "@/components/footer/footer";
-import {NextIntlClientProvider} from "next-intl";
 import {get_messages} from "@/i18n";
 import {ReactNode} from "react";
 import ThemeRegistry from "@/components/theme/theme.registry";
-import {get_layout} from "@/api/requests.api";
+// import {get_layout} from "@/api/requests.api";
 import {GlobalSnackbarNotification} from "@/components/common/notifications/global-snackbar.notification";
 import {TLocale} from "@/interfaces/global.interface";
-import {cookies} from "next/headers";
+// import {cookies} from "next/headers";
 import {ProfileRegister} from "@/components/registers/profile.register";
+import { NextIntlClientProvider } from "next-intl";
 
 export interface LocaleParams {
     locale: TLocale;
