@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { build_meta_data, LocaleParams } from "@/app/[locale]/layout";
 import { Metadata } from "next";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { TLocale } from "@/interfaces/global.interface";
 import BranchMap from "@/components/common/maps/branch.map";
 import { notFound } from "next/navigation";
@@ -34,7 +34,7 @@ export async function generateMetadata({
 }: {
     params: LocaleParams;
 }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     //TODO SEO TAGS
     return build_meta_data(locale, [t("pages.store", { branch: branch_slug })]);
 }
@@ -47,7 +47,7 @@ interface Props {
 }
 
 async function StoreDetailsPage({ params: { locale, branch_slug } }: Props) {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     // if (!branch_slug) {
     //     notFound();

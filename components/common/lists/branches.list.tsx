@@ -1,7 +1,7 @@
 import {Box} from "@mui/material";
 import {build_meta_data, LocaleParams} from "@/app/[locale]/layout";
 import {Metadata} from "next";
-import {getTranslator} from "next-intl/server";
+import {getTranslations} from "next-intl/server";
 import {GlobalInterface} from "@/interfaces/global.interface";
 import {BranchModel} from "@/api/interfaces.api";
 

@@ -1,12 +1,12 @@
 import {Box, Container} from "@mui/material";
 import {build_meta_data, LocaleParams} from "@/app/[locale]/layout";
 import {Metadata} from "next";
-import {getTranslator} from "next-intl/server";
+import {getTranslations} from "next-intl/server";
 import {TLocale} from "@/interfaces/global.interface";
 import {PageTitleText} from "@/components/common/text/static-page-title.text";
 
 export async function generateMetadata({params: {locale}}: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.privacy")]);
 }
 
@@ -19,7 +19,7 @@ interface Props {
 
 export default async function PrivacyPage({params: {locale}}: Props) {
 
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     // const {
     //     content,

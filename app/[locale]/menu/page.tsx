@@ -2,7 +2,7 @@ import CategoryCard from "@/components/common/cards/category.card";
 import { AppBar, Box, Button, Container, Tab, Tabs, Typography } from "@mui/material";
 import { Metadata } from "next";
 import { build_meta_data } from "@/app/[locale]/layout";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { TLocale } from "@/interfaces/global.interface";
 import MealsListSection from "@/components/common/lists/meals.list";
 import carousel1 from "@/public/home/carousel/1.jpg";
@@ -19,7 +19,7 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import Link from "next/link";
 import { format_price } from "@/util/formatting.util";
 export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     // const {category} = await get_categories();
 
@@ -1734,7 +1734,7 @@ export const cart = {
 export default async function MenuPage({ params: { locale, category_slugs } }: Props) {
     // const category_slug = category_slugs[0] ?? "";
 
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     // const response_data = await get_category_details(category_slug);
 

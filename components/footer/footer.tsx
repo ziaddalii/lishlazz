@@ -1,5 +1,5 @@
 import { GlobalInterface } from "@/interfaces/global.interface";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import SocialButton from "@/components/common/buttons/social.button";
 import Logo from "@/public/logo.png";
 import { Container } from "@mui/material";
@@ -37,7 +37,7 @@ const social_list: SocialData[] = [
 ];
 
 export default async function Footer({ locale, data }: Props) {
-    const t = await getTranslator(locale as string);
+    const t = await getTranslations(locale as string);
 
     const pages_data: PageData[] = [
         {

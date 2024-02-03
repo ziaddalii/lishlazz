@@ -3,17 +3,15 @@ import "./quill.css";
 import "../../components/common/carousels/carousel.css";
 import type {Metadata} from "next";
 import {notFound} from "next/navigation";
-import {getTranslator} from "next-intl/server";
+import {getTranslations} from "next-intl/server";
 import NavBar from "@/components/navigation/nav-bar";
 import FloatingArrowButton from "@/components/common/buttons/floating-arrow.button";
 import Footer from "@/components/footer/footer";
 import {get_messages} from "@/i18n";
 import {ReactNode} from "react";
 import ThemeRegistry from "@/components/theme/theme.registry";
-// import {get_layout} from "@/api/requests.api";
 import {GlobalSnackbarNotification} from "@/components/common/notifications/global-snackbar.notification";
 import {TLocale} from "@/interfaces/global.interface";
-// import {cookies} from "next/headers";
 import {ProfileRegister} from "@/components/registers/profile.register";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -22,7 +20,7 @@ export interface LocaleParams {
 }
 
 export async function build_meta_data(locale: TLocale, routes: string[] = []): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     routes.push(t("app.name"));
     return {
         title: routes.join(" | "),

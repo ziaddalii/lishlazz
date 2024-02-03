@@ -1,7 +1,7 @@
 import { Box, Button, Container, Divider } from "@mui/material";
 import { build_meta_data, LocaleParams } from "@/app/[locale]/layout";
 import { Metadata } from "next";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { TLocale } from "@/interfaces/global.interface";
 import { format_price } from "@/util/formatting.util";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -17,7 +17,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import PercentIcon from "@mui/icons-material/Percent";
 import CouponDialog from "@/components/common/dialogs/coupon.dialog";
 export async function generateMetadata({ params: { locale } }: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.cart")]);
 }
 
@@ -28,7 +28,7 @@ interface Props {
 }
 
 export default async function CartPage({ params: { locale } }: Props) {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     // const {
     //     summary,

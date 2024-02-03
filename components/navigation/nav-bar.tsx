@@ -1,5 +1,5 @@
 "use client";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { GlobalInterface } from "@/interfaces/global.interface";
 import { GlobalProgressBarNotification } from "@/components/common/notifications/global-progress-bar.notification";
 import { Autocomplete, Badge, Button, Container, IconButton } from "@mui/material";
@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 interface Props extends GlobalInterface { }
 
 export default function NavBar({ locale }: Props) {
-    // const t = await getTranslator(locale as string);
+    // const t = await getTranslations(locale as string);
     const t = useTranslations();
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);

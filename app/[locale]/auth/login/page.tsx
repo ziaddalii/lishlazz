@@ -3,14 +3,14 @@ import {Box, Button, Container} from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import {Metadata} from "next";
 import {build_meta_data, LocaleParams} from "@/app/[locale]/layout";
-import {getTranslator} from "next-intl/server";
+import {getTranslations} from "next-intl/server";
 import {ThirdPartyRegisterSection} from "@/components/pages/auth/third-party-register.section";
-import Link from "next-intl/link";
+import Link from "next/link";
 import LoginForm from "@/components/common/form/login.form";
 import {GlobalInterface, TLocale} from "@/interfaces/global.interface";
 
 export async function generateMetadata({params: {locale}}: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.login")]);
 }
 
@@ -26,7 +26,7 @@ interface LocaleProps {
 
 export default async function LoginPage({params: {locale}}: Props) {
     
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     
     // const {ad_sense} = await get_login();
     

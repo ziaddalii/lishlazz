@@ -2,7 +2,7 @@ import { Box, Container } from "@mui/material";
 import { Metadata } from "next";
 import { build_meta_data, LocaleParams } from "@/app/[locale]/layout";
 import { get_home } from "@/api/requests.api";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { TLocale } from "@/interfaces/global.interface";
 import Image from "next/image";
 import HomeExploreMenuSection from "@/components/pages/home/explore-menu.section";
@@ -21,7 +21,7 @@ import BurgerMeal from "@/public/food/meal-burger.png";
 import { SlidesPerviewCarousel, AutoSlidesPerviewCarousel } from "@/components/common/carousels/images.carousel";
 import HomeSafetySection from "@/components/pages/home/contact.section";
 export async function generateMetadata({ params: { locale } }: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.home")]);
 }
 
@@ -40,7 +40,7 @@ interface Props {
 }
 
 export default async function HomePage({ params: { locale } }: Props) {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     const banners = [
         {
             id: "1",

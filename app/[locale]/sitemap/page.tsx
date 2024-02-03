@@ -2,7 +2,7 @@ import {Box, Container} from "@mui/material";
 import Link from "next/link";
 import {build_meta_data} from "@/app/[locale]/layout";
 import {Metadata} from "next";
-import {getTranslator} from "next-intl/server";
+import {getTranslations} from "next-intl/server";
 import {get_sitemap} from "@/api/requests.api";
 import Image from "next/image";
 import {TLocale} from "@/interfaces/global.interface";
@@ -13,7 +13,7 @@ interface LocaleParams {
 }
 
 export async function generateMetadata({params: {locale}}: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.sitemap")]);
 }
 
@@ -115,7 +115,7 @@ export default async function SiteMapPage({params: {locale}}: Props) {
             },
         ],
     };
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     
     return (
         <Box component="main">

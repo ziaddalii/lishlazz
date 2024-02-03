@@ -2,7 +2,7 @@ import DeliveryAddresses from "@/components/pages/checkout/delivery-address";
 import { GlobalInterface } from "@/interfaces/global.interface";
 import { format_price } from "@/util/formatting.util";
 import { Button, Container, Divider } from "@mui/material";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 interface Props extends GlobalInterface {
     params:{
@@ -49,7 +49,7 @@ const cart = {
 };
 
 const CheckoutPage = async ({ params: { locale } }: Props) => {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     return (
         <Container maxWidth="xl" className="space-y-4">

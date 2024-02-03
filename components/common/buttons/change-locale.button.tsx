@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next-intl/link";
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname } from "next-intl/client";
+// import { usePathname } from "next-intl/client";
 import { Button } from "@mui/material";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
+import Link from "next/link";
 
 export default function ChangeLocaleButton() {
     //LOCALE

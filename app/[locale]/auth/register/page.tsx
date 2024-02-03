@@ -2,14 +2,14 @@ import {Box, Container} from "@mui/material";
 import Link from "next/link";
 import {build_meta_data, LocaleParams} from "@/app/[locale]/layout";
 import {Metadata} from "next";
-import {getTranslator} from "next-intl/server";
+import {getTranslations} from "next-intl/server";
 import {ThirdPartyRegisterSection} from "@/components/pages/auth/third-party-register.section";
-import {RegisterFormSection} from "@/components/pages/auth/register-form.section";
+// import {RegisterFormSection} from "@/components/pages/auth/register-form.section";
 import {GlobalInterface, TLocale} from "@/interfaces/global.interface";
 import {SelectModel} from "@/components/common/form/select.form";
 
 export async function generateMetadata({ params: { locale } }: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.register")]);
 }
 
@@ -30,7 +30,7 @@ export interface CityData extends SelectModel {
 }
 
 export default async function RegisterPage({ params: { locale } }: Props) {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     // const { ad_sense, locations } = await get_register();
 

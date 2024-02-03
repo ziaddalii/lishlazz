@@ -1,13 +1,13 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import { build_meta_data, LocaleParams } from "@/app/[locale]/layout";
 import { Metadata } from "next";
-import { getTranslator } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { TLocale } from "@/interfaces/global.interface";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Link from "next/link";
 import EmailIcon from "@mui/icons-material/Email";
 export async function generateMetadata({ params: { locale } }: { params: LocaleParams }): Promise<Metadata> {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
     return build_meta_data(locale, [t("pages.contact-us")]);
 }
 
@@ -18,7 +18,7 @@ interface Props {
 }
 
 export default async function ContactUsPage({ params: { locale } }: Props) {
-    const t = await getTranslator(locale);
+    const t = await getTranslations();
 
     return (
         <Box component="main" className="mt-8">
