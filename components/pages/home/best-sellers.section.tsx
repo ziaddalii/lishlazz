@@ -7,7 +7,7 @@ import { SlidesPerviewCarousel } from "@/components/common/carousels/images.caro
 import ExploreMenuCard from "@/components/common/cards/explore-menu.card";
 
 interface Props extends GlobalInterface {
-    data: HomeModel["best_sellers"]
+    data: HomeModel["best_sellers"];
 }
 
 export default function HomeBestSellersSection({locale, data, t}: Props) {
