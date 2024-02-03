@@ -7,7 +7,7 @@ import { SlidesPerviewCarousel } from "@/components/common/carousels/images.caro
 import ExploreMenuCard from "@/components/common/cards/explore-menu.card";
 
 interface Props extends GlobalInterface {
-    data: HomeModel["best_sellers"];
+    data: HomeModel["best_sellers"] | any;
 }
 
 export default function HomeBestSellersSection({locale, data, t}: Props) {
@@ -20,7 +20,7 @@ export default function HomeBestSellersSection({locale, data, t}: Props) {
             <SlidesPerviewCarousel
                 slidesPerView={{main:1, lg:4, md:3, sm:2}}
                 spaceBetween={{ main: 20 }}
-                slides={data.map((e, index) => (
+                slides={data.map((e) => (
                     <ExploreMenuCard
                         locale={locale}
                         key={e.id}

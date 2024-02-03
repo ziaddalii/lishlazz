@@ -7,7 +7,7 @@ import { SwiperSlide } from "swiper/react";
 import { SlidesPerviewCarousel } from "@/components/common/carousels/images.carousel";
 
 interface Props extends GlobalInterface {
-    data: HomeModel["explore"];
+    data: HomeModel["explore"] | any;
 }
 
 export default function HomeExploreMenuSection({ locale, data, t }: Props) {

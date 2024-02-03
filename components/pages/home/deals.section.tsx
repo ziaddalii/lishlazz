@@ -7,7 +7,7 @@ import MenuCard from "@/components/common/cards/MenuCard";
 import { SlidesPerviewCarousel } from "@/components/common/carousels/images.carousel";
 
 interface Props extends GlobalInterface {
-    data: HomeModel["deals"];
+    data: HomeModel["deals"] | any;
 }
 
 export default async function HomeDealsSection({ locale, data, t }: Props) {
