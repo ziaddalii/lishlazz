@@ -1057,7 +1057,7 @@ export default async function HomePage({ params: { locale } }: Props) {
                     spaceBetween={{ main: 20 }}
                     pagination={true}
                     navigation={true}
-                    autoplay={{ delay: 2000, disableOnInteraction: true }}
+                    autoplay={{ delay: 5000, disableOnInteraction: true }}
                     loop={true}
                     slides={banners.map((banner, i) => (
                         <a href="#" key={banner.id}>
