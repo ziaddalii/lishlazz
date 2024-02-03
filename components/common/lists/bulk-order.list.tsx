@@ -1,7 +1,3 @@
-import { Box } from "@mui/material";
-import { build_meta_data, LocaleParams } from "@/app/[locale]/layout";
-import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 import { GlobalInterface } from "@/interfaces/global.interface";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";

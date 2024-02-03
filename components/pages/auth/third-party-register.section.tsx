@@ -8,20 +8,20 @@ import {GlobalInterface} from "@/interfaces/global.interface";
 
 interface Props extends GlobalInterface {}
 
-export const third_parties = [
-    {
-        img_url: Google,
-        title: "Google",
-    },
-    {
-        img_url: Facebook,
-        title: "Facebook",
-    },
-    {
-        img_url: Twitter,
-        title: "Twitter / X",
-    },
-];
+// export const third_parties = [
+//     {
+//         img_url: Google,
+//         title: "Google",
+//     },
+//     {
+//         img_url: Facebook,
+//         title: "Facebook",
+//     },
+//     {
+//         img_url: Twitter,
+//         title: "Twitter / X",
+//     },
+// ];
 
 export function ThirdPartyRegisterSection({t}: Props) {
     return (
@@ -32,9 +32,9 @@ export function ThirdPartyRegisterSection({t}: Props) {
                 </Box>
 
                 <Grid container columnSpacing={4} spacing={2}>
-                    {third_parties.map((item, i) => {
+                    {/* {third_parties.map((item, i) => {
                         return <ThirdPartyButton key={i} img_url={item.img_url} title={item.title}/>;
-                    })}
+                    })} */}
                 </Grid>
 
             </Grid>
